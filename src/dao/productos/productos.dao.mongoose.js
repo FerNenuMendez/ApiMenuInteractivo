@@ -1,4 +1,5 @@
 import { Schema, model, connect } from 'mongoose'
+import { defaultComida } from '../../utils/config/config.js'
 import dotenv from "dotenv";
 
 dotenv.config();
@@ -12,7 +13,7 @@ const productosSchema = new Schema({
     nombre: { type: String, unique: true, required: true },
     detalle: { type: String, required: true },
     precio: { type: Number, required: true },
-    foto: { type: String, required: true },
+    foto: { type: String, dafault: defaultComida },
 }, {
     strict: 'throw',
     versionKey: false,
