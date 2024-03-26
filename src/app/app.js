@@ -11,6 +11,7 @@ const corsOptions = {
     optionsSuccessStatus: 200,
 };
 
+app.use('/static', express.static('./static'))
 app.use(cors(corsOptions));
 app.use('/api', apiRouter)
 

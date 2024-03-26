@@ -12,8 +12,8 @@ const productosSchema = new Schema({
     id: { type: Number, unique: true, required: true },
     nombre: { type: String, unique: true, required: true },
     detalle: { type: String, required: true },
-    precio: { type: Number, required: true },
-    foto: { type: String, dafault: defaultComida },
+    precio: { type: Number, min: 0, required: true },
+    foto: { type: String, required: true, default: `${defaultComida}` },
 }, {
     strict: 'throw',
     versionKey: false,
