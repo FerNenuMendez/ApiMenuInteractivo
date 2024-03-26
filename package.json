@@ -1,0 +1,23 @@
+{
+  "type": "module",
+  "name": "api-menu",
+  "version": "1.0.0",
+  "description": "Api Menu Interactivo",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "node .",
+    "dev": "nodemon -e js, handlebars, html ."
+  },
+  "author": "FerNenuMendez",
+  "license": "ISC",
+  "dependencies": {
+    "connect-mongo": "^5.1.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-handlebars": "^7.1.2",
+    "mongoose": "^8.2.3",
+    "nodemon": "^3.1.0",
+    "sweetalert2": "^11.10.7"
+  }
+}
