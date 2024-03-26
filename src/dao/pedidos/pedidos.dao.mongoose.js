@@ -26,7 +26,7 @@ const pedidosSchema = new Schema({
 
 const pedidosModel = model(collection, pedidosSchema)
 
-class pedidosDaoMongoose {
+class PedidosDaoMongoose {
     async create(data) {
         const producto = await pedidosModel.create(data)
         return producto.toObject()
@@ -58,13 +58,13 @@ class pedidosDaoMongoose {
 }
 
 let pedidosDaoMongoose
-console.log('usando persistencia en mongodb')
+//console.log('usando persistencia en mongodb')
 
 export async function getDaoMongoose() {
     if (!pedidosDaoMongoose) {
         await connect(MONGODB_CNX_STR)
-        console.log('conectado a mongodb')
-        pedidosDaoMongoose = new pedidosDaoMongoose()
+        console.log('conectado Pedidos a mongodb')
+        pedidosDaoMongoose = new PedidosDaoMongoose()
     }
     return pedidosDaoMongoose
 }

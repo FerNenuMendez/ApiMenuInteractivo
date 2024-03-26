@@ -57,7 +57,7 @@ console.log('usando persistencia en mongodb')
 export async function getDaoMongoose() {
     if (!productosDaoMongoose) {
         await connect(MONGODB_CNX_STR)
-        console.log('conectado a mongodb')
+        console.log('conectado Productos a mongodb')
         productosDaoMongoose = new ProductosDaoMongoose()
     }
     return productosDaoMongoose

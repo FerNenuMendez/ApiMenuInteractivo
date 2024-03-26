@@ -1,4 +1,4 @@
-import { getDaoProductos } from "../dao/productos/producto.dao.js";
+import { getDaoProductos } from "../dao/productos/productos.dao.js";
 
 const productosDao = await getDaoProductos()
 
