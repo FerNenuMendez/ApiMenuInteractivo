@@ -1,0 +1,61 @@
+/* MOBILE */
+@media (min-width: 320px) and (max-width: 540px) {
+  /* HEADER */
+  .header {
+    width: 100%; /* Ancho completo del contenedor */
+    height: auto; /* Altura automática para mantener la proporción */
+    overflow: hidden; /* Oculta cualquier parte de la imagen que se desborde */
+  }
+  .logoImg {
+    width: 100%; /* Ancho completo de la imagen */
+    height: auto; /* Altura automática para mantener la proporción */
+    display: block; /* Hace que la imagen se muestre como un bloque */
+  }
+  /* Main */
+  /* INFO */
+  .main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .infoPedido {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .h1 {
+    font-size: 2.5rem;
+  }
+  .h2 {
+    font-size: xx-large;
+  }
+  .formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    margin: 10px;
+  }
+  .div__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .div__info label {
+    font-size: x-large;
+    margin: 10px;
+  }
+  .div__info input {
+    font-size: x-large;
+    margin: 10px;
+  }
+  /* INFO FIN */
+}
+/* TABLET */
+@media (min-width: 541px) and (max-width: 1024px) {
+}

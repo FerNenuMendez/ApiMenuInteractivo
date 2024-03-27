@@ -40,11 +40,11 @@ class PedidosDaoMongoose {
     }
 
     //query=ID Pedido, data=producto
-    async addOne(query, data) {
-        const pedido = await pedidosModel.findOne(query).lean()
-        const productsData = { id: data.id, cantidad: data.cantidad, precio: data.precio };
-        pedido.detalle.push(productsData)
-    }
+    // async addOne(query, data) {
+    //     const pedido = await pedidosModel.findOne(query).lean()
+    //     const productsData = { id: data.id, cantidad: data.cantidad, precio: data.precio };
+    //     pedido.detalle.push(productsData)
+    // }
 
     async updateMany(query, data) {
         throw new Error('NOT IMPLEMENTED')
