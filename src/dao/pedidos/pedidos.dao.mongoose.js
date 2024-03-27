@@ -13,10 +13,9 @@ const pedidosSchema = new Schema({
     fecha: { type: String, required: true },
     detalle: [{
         id: { type: Number },
-        descripcion: { type: String },
+        cantidad: { type: Number },
         precio: { type: Number },
-    }
-    ],
+    }],
     total: { type: Number, required: true },
     mesa: { type: Number, required: true },
 }, {
@@ -40,8 +39,11 @@ class PedidosDaoMongoose {
         return await pedidosModel.find(query).lean()
     }
 
-    async updateOne(query, data) {
-        throw new Error('NOT IMPLEMENTED')
+    //query=ID Pedido, data=producto
+    async addOne(query, data) {
+        const pedido = await pedidosModel.findOne(query).lean()
+        const productsData = { id: data.id, cantidad: data.cantidad, precio: data.precio };
+        pedido.detalle.push(productsData)
     }
 
     async updateMany(query, data) {

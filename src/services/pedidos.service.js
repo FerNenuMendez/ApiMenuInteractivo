@@ -6,6 +6,7 @@ class PedidosService {
     async obtenerPedidos() {
         return await pedidosDao.readMany({})
     }
+
     async agregarPedido(datosPedidos) {
         const pedido = await pedidosDao.create(datosPedidos)
         return pedido
