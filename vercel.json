@@ -1,48 +1,52 @@
 {
-    "version": 2,
-    "builds": [
-      {
-        "src": "src/main.js",
-        "use": "@vercel/node"
+  "version": 2,
+  "builds": [
+    {
+      "src": "src/main.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/",
+      "dest": "./index.html"
+    },
+    {
+      "src": "/css/(.*)",
+      "dest": "./css/$1"
+    },
+    {
+      "src": "/js/(.*)",
+      "dest": "./js/$1"
+    },
+    {
+      "src": "/public/(.*)",
+      "dest": "./public/$1"
+    },
+    {
+      "src": "/api(.*)",
+      "dest": "src/routers/api/api.router.js"
+    },
+    {
+      "src": "/api/pedidos(.*)",
+      "dest": "src/routers/api/pedidos.router.js"
+    },
+    {
+      "src": "/api/productos(.*)",
+      "dest": "src/routers/api/productos.router.js"
+    },
+    {
+      "handle": "filesystem"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "src/main.js",
+      "headers": {
+        "Access-Control-Allow-Credentials": "true",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "GET,OPTIONS,PATCH,DELETE,POST,PUT",
+        "Access-Control-Allow-Headers": "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version"
       }
-    ],
-    "routes": [
-      {
-        "src": "/",
-        "dest": "./index.html"
-      },
-      {
-        "src": "/css/(.*)",
-        "dest": "./css/$1"
-      },
-      {
-        "src": "/public/(.*)",
-        "dest": "./public/$1"
-      },
-      {
-        "src": "/api(.*)",
-        "dest": "src/routers/api/api.router.js"
-      },
-      {
-        "src": "/api/pedidos(.*)",
-        "dest": "src/routers/api/pedidos.router.js"
-      },
-      {
-        "src": "/api/productos(.*)",
-        "dest": "src/routers/api/productos.router.js"
-      },
-      {
-        "handle": "filesystem"
-      },
-      {
-        "src": "/(.*)",
-        "dest": "src/main.js",
-        "headers": {
-          "Access-Control-Allow-Credentials": "true",
-          "Access-Control-Allow-Origin": "*",
-          "Access-Control-Allow-Methods": "GET,OPTIONS,PATCH,DELETE,POST,PUT",
-          "Access-Control-Allow-Headers": "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version"
-      }
-      }
-    ]
-  }
+    }
+  ]
+}
