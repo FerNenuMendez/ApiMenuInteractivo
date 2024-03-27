@@ -26,7 +26,7 @@
     justify-content: center;
   }
   .h1 {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
   }
   .h2 {
     font-size: xx-large;
@@ -58,4 +58,15 @@
 }
 /* TABLET */
 @media (min-width: 541px) and (max-width: 1024px) {
+  /* HEADER */
+  .header {
+    width: 100%; /* Ancho completo del contenedor */
+    height: auto; /* Altura automática para mantener la proporción */
+    overflow: hidden; /* Oculta cualquier parte de la imagen que se desborde */
+  }
+  .logoImg {
+    width: 100%; /* Ancho completo de la imagen */
+    height: auto; /* Altura automática para mantener la proporción */
+    display: block; /* Hace que la imagen se muestre como un bloque */
+  }
 }
