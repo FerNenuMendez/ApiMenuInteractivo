@@ -1,72 +1,295 @@
-/* MOBILE */
-@media (min-width: 320px) and (max-width: 540px) {
-  /* HEADER */
-  .header {
-    width: 100%; /* Ancho completo del contenedor */
-    height: auto; /* Altura automática para mantener la proporción */
-    overflow: hidden; /* Oculta cualquier parte de la imagen que se desborde */
-  }
-  .logoImg {
-    width: 100%; /* Ancho completo de la imagen */
-    height: auto; /* Altura automática para mantener la proporción */
-    display: block; /* Hace que la imagen se muestre como un bloque */
-  }
-  /* Main */
-  /* INFO */
-  .main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  .infoPedido {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  .h1 {
-    font-size: 1.5rem;
-  }
-  .h2 {
-    font-size: xx-large;
-  }
-  .formulario {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: auto;
-    margin: 10px;
-  }
-  .div__info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  .div__info label {
-    font-size: x-large;
-    margin: 10px;
-  }
-  .div__info input {
-    font-size: x-large;
-    margin: 10px;
-  }
-  /* INFO FIN */
+/* Reset CSS básico */
+
+/* Normalizar el comportamiento de los elementos */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box; /* Asegura que el padding y el border se incluyan en el ancho y alto total */
 }
-/* TABLET */
-@media (min-width: 541px) and (max-width: 1024px) {
-  /* HEADER */
+
+/* Elementos que deben mostrarse de manera "block" por defecto */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+/* Elementos de tipo "body" y "html" con un alto y ancho del 100% */
+body,
+html {
+  width: 100%;
+  height: 100%;
+}
+
+/* Asegura que los enlaces tengan el mismo estilo por defecto */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Asegura que los elementos de tipo "input" y "textarea" tengan un aspecto consistente */
+input,
+textarea {
+  border-radius: 0;
+}
+
+/* Corrige los errores de espaciado entre elementos en línea y los elementos de bloque */
+button,
+input,
+select,
+textarea {
+  margin: 0;
+  font-size: inherit;
+  vertical-align: middle;
+}
+
+/* Elimina los estilos predeterminados de la lista */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Estilos adicionales para el documento */
+body {
+  line-height: 1;
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  color: #333333;
+}
+
+/* Asegura que los elementos "a" se comporten como "inline-block" por defecto */
+a {
+  display: inline-block;
+}
+
+/* Asegura que las imágenes sean responsivas */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Elimina el espacio extra en los elementos "table" */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/*////////////////////////////////////////////////////////////////*/
+/* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  background-color: #333;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.logoImg {
+  width: 150px;
+  height: auto;
+}
+
+.main {
+  padding: 20px;
+}
+
+.infoPedido {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.h1,
+.h2 {
+  margin-bottom: 20px;
+}
+
+.formulario {
+  margin-top: 20px;
+}
+
+.div__info {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Media queries para móviles */
+@media (max-width: 768px) {
   .header {
-    width: 100%; /* Ancho completo del contenedor */
-    height: auto; /* Altura automática para mantener la proporción */
-    overflow: hidden; /* Oculta cualquier parte de la imagen que se desborde */
+    padding: 15px 0;
   }
+
   .logoImg {
-    width: 100%; /* Ancho completo de la imagen */
-    height: auto; /* Altura automática para mantener la proporción */
-    display: block; /* Hace que la imagen se muestre como un bloque */
+    width: 200px;
+    border-radius: 5%;
+  }
+
+  .infoPedido {
+    padding: 15px;
+  }
+
+  .h1 {
+    font-size: 1.5em;
+  }
+
+  .h2 {
+    font-size: 1.2em;
+  }
+}
+
+/* Media queries para tabletas */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .main {
+    padding: 30px;
+  }
+
+  .logoImg {
+    width: 250px;
+    border-radius: 5%;
+  }
+
+  .infoPedido {
+    padding: 25px;
+  }
+
+  .h1 {
+    font-size: 2em;
+  }
+
+  .h2 {
+    font-size: 1.5em;
+  }
+
+  input[type="text"],
+  input[type="number"] {
+    padding: 12px;
+  }
+
+  button[type="submit"] {
+    padding: 12px;
   }
 }
