@@ -14,7 +14,7 @@ const corsOptions = {
 
 app.use('/static', express.static('./static'))
 app.use(cors(corsOptions));
-app.use('/', webRouter)
+// app.use('/', webRouter)
 app.use('/api', apiRouter)
 
 app.get('/test', (req, res) => {
