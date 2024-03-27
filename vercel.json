@@ -9,7 +9,15 @@
     "routes": [
       {
         "src": "/",
-        "dest": "/index.html"
+        "dest": "./index.html"
+      },
+      {
+        "src": "/css/(.*)",
+        "dest": "./css/$1"
+      },
+      {
+        "src": "/public/(.*)",
+        "dest": "./public/$1"
       },
       {
         "src": "/api(.*)",
