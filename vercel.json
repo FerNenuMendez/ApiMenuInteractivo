@@ -40,7 +40,7 @@
     },
     {
       "src": "/(.*)",
-      "dest": "src/main.js",
+      "dest": "index.html",
       "headers": {
         "Access-Control-Allow-Credentials": "true",
         "Access-Control-Allow-Origin": "*",
