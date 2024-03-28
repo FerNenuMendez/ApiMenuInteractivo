@@ -21,7 +21,7 @@
     },
     {
       "src": "/",
-      "dest": "src/routers/web/web.router.js"
+      "dest": "index.html"
     },
     {
       "src": "/static/(.*)",
