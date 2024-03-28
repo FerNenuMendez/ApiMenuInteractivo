@@ -12,18 +12,6 @@
       "dest": "src/routers/api/api.router.js"
     },
     {
-      "src": "/api/pedidos(.*)",
-      "dest": "src/routers/api/pedidos.router.js"
-    },
-    {
-      "src": "/api/productos(.*)",
-      "dest": "src/routers/api/productos.router.js"
-    },
-    {
-      "src": "/static/(.*)",
-      "dest": "static/$1"
-    },
-    {
       "src": "/(.*)",
       "dest": "src/main.js",
       "headers": {
@@ -31,7 +19,7 @@
         "Access-Control-Allow-Origin": "*",
         "Access-Control-Allow-Methods": "GET,OPTIONS,PATCH,DELETE,POST,PUT",
         "Access-Control-Allow-Headers": "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version"
-      }
+    }
     }
   ]
 }
