@@ -20,10 +20,6 @@
       "dest": "src/routers/api/productos.router.js"
     },
     {
-      "src": "/",
-      "dest": "index.html"
-    },
-    {
       "src": "/static/(.*)",
       "dest": "static/$1"
     },
