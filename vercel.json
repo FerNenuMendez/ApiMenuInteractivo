@@ -9,15 +9,15 @@
   "routes": [
     {
       "src": "/api(.*)",
-      "dest": "src/routes/apiRouter.js"
+      "dest": "src/routers/api.router.js"
     },
     {
       "src": "/api/pedidos(.*)",
-      "dest": "src/routes/routers/pedidos.router.js"
+      "dest": "src/routers/routers/pedidos.router.js"
     },
     {
       "src": "/api/productos(.*)",
-      "dest": "src/routes/routers/productos.router.js"
+      "dest": "src/routers/routers/productos.router.js"
     },
     {
       "handle": "filesystem"
