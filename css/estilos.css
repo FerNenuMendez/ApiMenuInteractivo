@@ -240,7 +240,16 @@ button[type="submit"] {
   border-radius: 5px;
   cursor: pointer;
 }
-
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem;
+  padding: 1rem;
+  text-align: center;
+  font-size: large;
+}
 /* Media queries para móviles */
 @media (max-width: 768px) {
   .header {
