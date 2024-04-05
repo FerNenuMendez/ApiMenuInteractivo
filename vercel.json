@@ -12,12 +12,12 @@
       "dest": "src/routes/apiRouter.js"
     },
     {
-      "src": "/api/user(.*)",
-      "dest": "src/routes/routers/userRouter.js"
+      "src": "/api/pedidos(.*)",
+      "dest": "src/routes/routers/pedidos.router.js"
     },
     {
-      "src": "/api/session(.*)",
-      "dest": "src/routes/routers/sessionRouter.js"
+      "src": "/api/productos(.*)",
+      "dest": "src/routes/routers/productos.router.js"
     },
     {
       "handle": "filesystem"
