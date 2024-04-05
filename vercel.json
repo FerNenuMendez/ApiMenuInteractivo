@@ -13,11 +13,11 @@
     },
     {
       "src": "/api/pedidos(.*)",
-      "dest": "src/routers/api/routers/api/pedidos.router.js"
+      "dest": "src/routers/api/pedidos.router.js"
     },
     {
       "src": "/api/productos(.*)",
-      "dest": "src/routers/api/routers/api/productos.router.js"
+      "dest": "src/routers/api/productos.router.js"
     },
     {
       "handle": "filesystem"
