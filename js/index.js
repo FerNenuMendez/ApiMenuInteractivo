@@ -5,21 +5,25 @@ verMenuBtn.addEventListener('click', function () {
     var nombre = document.getElementById("nombre").value;
     var mesa = document.getElementById("mesa").value;
     if (nombre.length >= 3 && mesa.length >= 3) {
-        verMenu();
+        verPizzas();
     } else {
         alert("Por favor, ingrese al menos 3 caracteres en ambos campos.");
     }
 });
 
-function verMenu() {
+function verPizzas() {
     fetch('https://api-menu-six.vercel.app/api/productos/')
         .then(response => response.json())
         .then(data => {
             carSec.innerHTML = ""; // Limpiar contenido anterior
 
             if (data.status === "success") {
-                const productos = data.payload;
 
+                const h2 = document.createElement('h2')
+                h2.textContent = 'Pizzas'
+                h2.classList.add('menu__h2')
+
+                const productos = data.payload;
                 productos.forEach(producto => {
                     const card = document.createElement("div");
                     card.classList.add("card");

@@ -1,38 +1,38 @@
 import { Schema, model, connect } from 'mongoose'
-import { defaultComida } from '../../utils/config/config.js'
+import { defaultBebida } from '../../utils/config/config.js'
 import dotenv from "dotenv";
 
 dotenv.config();
 
 const MONGODB_CNX_STR = `${process.env.MONGODB_CNX_STR}`
 
-const collection = 'productos'
+const collection = 'bebidas'
 
-const productosSchema = new Schema({
+const bebidasSchema = new Schema({
     id: { type: Number, unique: true, required: true },
     nombre: { type: String, unique: true, required: true },
     detalle: { type: String, required: true },
     precio: { type: Number, min: 0, required: true },
-    img: { type: String, default: defaultComida },
+    img: { type: String, default: defaultBebida },
 }, {
     strict: 'throw',
     versionKey: false,
 })
 
-const productosModel = model(collection, productosSchema)
+const bebidasModel = model(collection, bebidasSchema)
 
-class ProductosDaoMongoose {
+class BebidasDaoMongoose {
     async create(data) {
-        const producto = await productosModel.create(data)
-        return producto.toObject()
+        const bebidas = await bebidasModel.create(data)
+        return bebidas.toObject()
     }
 
     async readOne(query) {
-        return await productosModel.findOne(query).lean()
+        return await bebidasModel.findOne(query).lean()
     }
 
     async readMany(query) {
-        return await productosModel.find(query).lean()
+        return await bebidasModel.find(query).lean()
     }
 
     async updateOne(query, data) {
@@ -44,7 +44,7 @@ class ProductosDaoMongoose {
     }
 
     async deleteOne(query) {
-        return await productosModel.findOneAndDelete(query).lean()
+        return await bebidasModel.findOneAndDelete(query).lean()
     }
 
     async deleteMany(query) {
@@ -52,14 +52,14 @@ class ProductosDaoMongoose {
     }
 }
 
-let productosDaoMongoose
+let bebidasDaoMongoose
 console.log('usando persistencia en mongodb')
 
 export async function getDaoMongoose() {
-    if (!productosDaoMongoose) {
+    if (!bebidasDaoMongoose) {
         await connect(MONGODB_CNX_STR)
-        console.log('conectado Productos a mongodb')
-        productosDaoMongoose = new ProductosDaoMongoose()
+        console.log('conectado bebidas a mongodb')
+        bebidasDaoMongoose = new BebidasDaoMongoose()
     }
-    return productosDaoMongoose
+    return bebidasDaoMongoose
 }
