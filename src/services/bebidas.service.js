@@ -2,7 +2,7 @@ import { getDaoBebidas } from "../dao/bebidas/bebidas.dao.js";
 
 const bebidasDao = await getDaoBebidas()
 
-class bebidasService {
+class BebidasService {
     async obtenerbebidas() {
         return await bebidasDao.readMany({})
     }
@@ -16,4 +16,4 @@ class bebidasService {
     }
 }
 
-export const bebidasService = new bebidasService()
+export const bebidasService = new BebidasService()
