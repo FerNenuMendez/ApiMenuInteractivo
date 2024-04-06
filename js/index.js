@@ -42,7 +42,7 @@ function verMenu() {
 
                     const precio = document.createElement("p");
                     precio.classList.add("card__precio");
-                    precio.textContent = `Precio: ${producto.precio}`;
+                    precio.textContent = `Precio: $${producto.precio}`;
                     card.appendChild(precio);
 
                     carSec.appendChild(card);
