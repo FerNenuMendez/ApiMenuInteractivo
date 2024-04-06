@@ -241,6 +241,18 @@ button[type="submit"] {
   border-radius: 5px;
   cursor: pointer;
 }
+.menu__h2 {
+  margin: 1rem;
+  padding: 1rem;
+  height: auto;
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 15px;
+  text-align: center;
+  font-size: xx-large;
+  background-color: brown;
+  color: #fff;
+  box-shadow: 4px 4px 4px grey;
+}
 .card {
   display: flex;
   flex-direction: column;
