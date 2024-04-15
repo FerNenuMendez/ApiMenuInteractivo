@@ -241,9 +241,33 @@ button[type="submit"] {
   border-radius: 5px;
   cursor: pointer;
 }
-.menu__h2 {
+.seleccion__btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.seleccion__btn__btn {
   margin: 1rem;
   padding: 1rem;
+  width: 100%;
+  height: auto;
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 15px;
+  text-align: center;
+  font-size: xx-large;
+  background-color: brown;
+  color: #fff;
+  box-shadow: 4px 4px 4px grey;
+}
+.menu__h2 {
+  margin: 2rem;
+  padding: 1.5rem;
   height: auto;
   border: 2px solid rgb(0, 0, 0);
   border-radius: 15px;
@@ -258,7 +282,7 @@ button[type="submit"] {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 1rem;
+  margin: 1.5rem;
   padding: 1rem;
   text-align: center;
   font-size: large;
@@ -271,14 +295,52 @@ button[type="submit"] {
   margin-bottom: 15px;
 }
 .card__nombre {
-  font-size: larger;
+  font-size: xx-large;
   font-weight: 600;
   margin-bottom: 10px;
 }
 .card__detalle {
-  font-size: large;
+  font-size: larger;
   margin-bottom: 10px;
 }
+.card__precio {
+  font-size: larger;
+  font-weight: 600;
+  margin: 10px;
+}
+.no__visible {
+  display: none;
+}
+.agregar__pedido {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+}
+.cantidad__input {
+  width: 100%;
+  margin: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  text-align: center;
+  font-size: larger;
+}
+.cantidad__btn {
+  margin: 1rem;
+  padding: 1rem;
+  width: 100%;
+  height: auto;
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 15px;
+  text-align: center;
+  font-size: medium;
+  background-color: brown;
+  color: #fff;
+  box-shadow: 4px 4px 4px grey;
+}
+
 /* Media queries para móviles */
 @media (max-width: 768px) {
   .header {
