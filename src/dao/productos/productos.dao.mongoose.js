@@ -10,6 +10,7 @@ const collection = 'productos'
 
 const productosSchema = new Schema({
     id: { type: Number, unique: true, required: true },
+    categoria: { type: String, required: true },
     nombre: { type: String, unique: true, required: true },
     detalle: { type: String, required: true },
     precio: { type: Number, min: 0, required: true },
