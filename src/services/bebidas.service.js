@@ -6,6 +6,9 @@ class BebidasService {
     async obtenerbebidas() {
         return await bebidasDao.readMany({})
     }
+    async obtenerBebidaPorID(idBebida) {
+        return await bebidasDao.readOne({ id: idBebida })
+    }
     async agregarBebida(datosbebidas) {
         const Bebida = await bebidasDao.create(datosbebidas)
         return Bebida

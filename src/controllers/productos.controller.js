@@ -9,6 +9,15 @@ export async function getController(req, res, next) {
     }
 }
 
+export async function getByIdController(req, res, next) {
+    try {
+        const producto = await productosService.obtenerProductoPorID(req.body)
+        res.result(producto)
+    } catch (error) {
+        next(error)
+    }
+}
+
 export async function postController(req, res, next) {
     try {
         const producto = await productosService.agregarProducto(req.body)

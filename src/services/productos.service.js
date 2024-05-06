@@ -6,6 +6,9 @@ class ProductosService {
     async obtenerProductos() {
         return await productosDao.readMany({})
     }
+    async obtenerProductoPorID(idProducto) {
+        return await productosDao.readOne({ id: idProducto })
+    }
     async agregarProducto(datosProductos) {
         const Producto = await productosDao.create(datosProductos)
         return Producto
