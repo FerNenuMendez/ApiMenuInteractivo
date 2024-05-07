@@ -5,7 +5,7 @@ export const bebidasRouter = Router()
 bebidasRouter.get('/test', (req, res) => {
     res.status(200).send('Bebidas Router OK')
 })
-bebidasRouter.get('/:id', getByIdController)
+bebidasRouter.get('/id/:id', getByIdController)
 bebidasRouter.get('/', getController)
 bebidasRouter.post('/', postController)
 bebidasRouter.delete('/:id', deleteController)

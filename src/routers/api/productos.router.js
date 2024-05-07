@@ -5,7 +5,7 @@ export const productosRouter = Router()
 productosRouter.get('/test', (req, res) => {
     res.status(200).send('Productos Router OK')
 })
-productosRouter.get('/:id', getByIdController)
+productosRouter.get('/id/:id', getByIdController)
 productosRouter.get('/', getController)
 productosRouter.post('/', postController)
 productosRouter.delete('/:id', deleteController)
