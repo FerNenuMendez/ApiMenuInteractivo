@@ -10,8 +10,9 @@ export async function getController(req, res, next) {
 }
 
 export async function getByIdController(req, res, next) {
+    const id = (req.params.id)
     try {
-        const bebida = await bebidasService.obtenerBebidaPorID(req.body)
+        const bebida = await bebidasService.obtenerBebidaPorID(id)
         res.result(bebida)
     } catch (error) {
         next(error)
