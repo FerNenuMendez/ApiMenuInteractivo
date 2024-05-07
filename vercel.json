@@ -16,8 +16,12 @@
       "dest": "src/routers/api/pedidos.router.js"
     },
     {
-      "src": "/api/productos(.*)",
+      "src": "/api/categoria/productos(.*)",
       "dest": "src/routers/api/productos.router.js"
+    },
+    {
+      "src": "/api/categoria/bebidas(.*)",
+      "dest": "src/routers/api/bebidas.router.js"
     },
     {
       "handle": "filesystem"
