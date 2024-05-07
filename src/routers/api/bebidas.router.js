@@ -4,7 +4,7 @@ import { getController, getByIdController, postController, deleteController } fr
 export const bebidasRouter = Router()
 
 bebidasRouter.get('/', getController)
-bebidasRouter.get('/:id', getByIdController)
+bebidasRouter.get('id/:id', getByIdController)
 bebidasRouter.post('/', postController)
 bebidasRouter.delete('/:id', deleteController)
 
