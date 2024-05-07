@@ -14,6 +14,6 @@ apiRouter.use(urlencoded({ extended: true }))
 apiRouter.use('/pedidos', pedidosRouter)
 apiRouter.use('/categoria', categoriaRouter)
 
-// pedidosRouter.get('/test', (req, res) => {
-//     res.status(200).send('API Router OK')
-// })
+pedidosRouter.get('/test', (req, res) => {
+    res.status(200).send('API Router OK')
+})
